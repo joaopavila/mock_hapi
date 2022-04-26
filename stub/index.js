@@ -9,7 +9,7 @@ const server = new Hapi.Server({
     cors: {
       origin: ["*"],
       credentials: true,
-      headers: ["*", "Accept", "content-type"],
+      headers: ["*", "Accept", "content-type", "X-Frame-Options"],
       additionalHeaders: ["X-Requested-With"],
       additionalExposedHeaders: ["*", "content-disposition"],
     },
