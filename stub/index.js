@@ -1,6 +1,5 @@
 const Hapi = require("@hapi/hapi");
 const routes = require("./routes");
-const map = require("lodash/map");
 
 const server = new Hapi.Server({
   host: "localhost",
@@ -16,7 +15,7 @@ const server = new Hapi.Server({
   },
 });
 
-map(routes, (route) => server.route(route));
+routes.map((route) => server.route(route));
 
 server.events.on("response", (response) => {
   console.log(
