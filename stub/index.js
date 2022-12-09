@@ -17,16 +17,6 @@ const server = new Hapi.Server({
 
 routes.map((route) => server.route(route));
 
-server.events.on("response", (response) => {
-  console.log(
-    `response - ${
-      response.info.remoteAddress
-    }: ${response.method.toUpperCase()} --> ${response.path} ${JSON.stringify(
-      response.payload
-    )} `
-  );
-});
-
 async function start() {
   try {
     await server.start();
