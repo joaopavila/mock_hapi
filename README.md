@@ -10,4 +10,4 @@ It will open an error page because you have not created an initial route for the
 
 # Examples
 
-Navigate to `http://localhost:8000/users` or `http://localhost:8000/example`
+Navigate to `http://localhost:8000/user` or `http://localhost:8000/example`
